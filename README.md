@@ -1,6 +1,6 @@
 # ecommerce_app_flutter_ahsan
 
-A new Flutter application.
+A simple Flutter e-commerce application that can do basic operatin.
 
 ## Getting Started
 
