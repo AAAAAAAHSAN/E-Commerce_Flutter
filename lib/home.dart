@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
-// class HomePage extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       color: Colors.pink,
-//       child: Text('hey', style: TextStyle(color: Colors.white),),
-//     );
-//   }
-// }
+import 'components/horizontal_listview.dart';
+import 'components/products.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -126,7 +119,25 @@ class _HomePageState extends State<HomePage> {
       ),
       body: new ListView(
         children: <Widget>[
-          image_set
+          // image carousel begins here
+          image_set,
+          // padding widget
+          new Padding(padding: const EdgeInsets.all(8.0),
+          child: new Text('Categories'),
+          ),
+          //horizontal list view begins here
+
+          HorizontalList(),
+
+          new Padding(padding: const EdgeInsets.all(20.0),
+            child: new Text('Recent products'),
+          ),
+
+          //grid view
+          Container(
+            height: 320,
+            child: Products(),
+          )
         ],
       ),
     );
