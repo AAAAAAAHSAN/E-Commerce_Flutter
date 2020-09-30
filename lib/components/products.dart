@@ -11,24 +11,34 @@ class _ProductsState extends State<Products> {
       "name":"Blazer",
       "picture":"images/products/blazer1.jpeg",
       "old_price": 120,
-      "pirce":95,
+      "price":95,
     },
     {
       "name":"Red Dress",
       "picture":"images/products/dress1.jpeg",
       "old_price": 100,
-      "pirce":50,
+      "price":50,
     },
     {
       "name":"Show",
       "picture":"images/products/hills1.jpeg",
       "old_price": 40,
-      "pirce":25,
+      "price":25,
     },
   ];
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return GridView.builder(
+        itemCount: product_list.length,
+        gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,),
+        itemBuilder: (BuildContext contex, int index){
+          return Single_product(
+            product_name: product_list[index]['name'],
+            product_picture: product_list[index]['picture'],
+            product_old_price: product_list[index]['old_price'],
+            product_price: product_list[index]['price'],
+          );
+        });
   }
 }
 class Single_product extends StatelessWidget {
@@ -44,6 +54,35 @@ class Single_product extends StatelessWidget {
 });
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Card(
+      child: Hero(
+        tag: product_name,
+        child: Material(
+          child: InkWell(onTap: () {},
+          child: GridTile(
+            footer: Container(
+              color: Colors.white70,
+                child: ListTile(
+                  leading: Text(product_name,
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  title: Text('\$ $product_price', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red),
+                  ),
+                  subtitle: Text('\$ $product_old_price',
+                    style: TextStyle(fontWeight:
+                      FontWeight.w800,
+                      color: Colors.black54,
+                      decoration: TextDecoration.lineThrough),
+                  )
+                ),
+            ),
+              child: Image.asset(
+                product_picture,
+                fit: BoxFit.cover,),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
