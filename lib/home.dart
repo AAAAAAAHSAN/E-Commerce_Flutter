@@ -11,8 +11,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-  Widget image_set = new Container(
-    height: 200.0,
+    Widget image_set = new Container(
+      height: 200.0,
       child: new Carousel(
         boxFit: BoxFit.cover,
         images: [
@@ -29,21 +29,30 @@ class _HomePageState extends State<HomePage> {
         dotSize: 4.0,
         indicatorBgPadding: 2.0,
       ),
-  );
+    );
 
     return Scaffold(
       appBar: new AppBar(
         backgroundColor: Colors.red,
         title: Text('Ahsan E commerce'),
-        actions: <Widget> [
-          new IconButton(icon: Icon(Icons.search, color: Colors.white,), onPressed: (){}),
-          new IconButton(icon: Icon(Icons.shopping_cart, color: Colors.white,), onPressed: (){})
-
+        actions: <Widget>[
+          new IconButton(
+              icon: Icon(
+                Icons.search,
+                color: Colors.white,
+              ),
+              onPressed: () {}),
+          new IconButton(
+              icon: Icon(
+                Icons.shopping_cart,
+                color: Colors.white,
+              ),
+              onPressed: () {})
         ],
       ),
       drawer: new Drawer(
         child: new ListView(
-          children: <Widget> [
+          children: <Widget>[
             // header
             new UserAccountsDrawerHeader(
               accountName: Text('Ahsan Ullah'),
@@ -51,67 +60,89 @@ class _HomePageState extends State<HomePage> {
               currentAccountPicture: GestureDetector(
                 child: new CircleAvatar(
                   backgroundColor: Colors.grey,
-                  child: Icon(Icons.person, color: Colors.white,),
+                  child: Icon(
+                    Icons.person,
+                    color: Colors.white,
+                  ),
                 ),
               ),
-              decoration: new BoxDecoration(
-                color: Colors.red
-              ),
+              decoration: new BoxDecoration(color: Colors.red),
             ),
             //body
             InkWell(
-              onTap: (){},
+              onTap: () {},
               child: ListTile(
                 title: Text('Home Page'),
-                leading: Icon(Icons.home , color: Colors.red,),
+                leading: Icon(
+                  Icons.home,
+                  color: Colors.red,
+                ),
               ),
             ),
 
             InkWell(
-              onTap: (){},
+              onTap: () {},
               child: ListTile(
                 title: Text('My Account'),
-                leading: Icon(Icons.person , color: Colors.red,),
+                leading: Icon(
+                  Icons.person,
+                  color: Colors.red,
+                ),
               ),
             ),
 
             InkWell(
-              onTap: (){},
+              onTap: () {},
               child: ListTile(
                 title: Text('My Orders'),
-                leading: Icon(Icons.business , color: Colors.red,),
+                leading: Icon(
+                  Icons.business,
+                  color: Colors.red,
+                ),
               ),
             ),
 
             InkWell(
-              onTap: (){},
+              onTap: () {},
               child: ListTile(
                 title: Text('Categories'),
-                leading: Icon(Icons.dashboard , color: Colors.red,),
+                leading: Icon(
+                  Icons.dashboard,
+                  color: Colors.red,
+                ),
               ),
             ),
 
             InkWell(
-              onTap: (){},
+              onTap: () {},
               child: ListTile(
                 title: Text('Favourites'),
-                leading: Icon(Icons.favorite , color: Colors.red,),
+                leading: Icon(
+                  Icons.favorite,
+                  color: Colors.red,
+                ),
               ),
             ),
 
             Divider(),
             InkWell(
-              onTap: (){},
+              onTap: () {},
               child: ListTile(
                 title: Text('Settings'),
-                leading: Icon(Icons.settings, color: Colors.green,),
+                leading: Icon(
+                  Icons.settings,
+                  color: Colors.green,
+                ),
               ),
             ),
             InkWell(
-              onTap: (){},
+              onTap: () {},
               child: ListTile(
                 title: Text('About'),
-                leading: Icon(Icons.info , color: Colors.green,),
+                leading: Icon(
+                  Icons.info,
+                  color: Colors.green,
+                ),
               ),
             ),
           ],
@@ -122,14 +153,16 @@ class _HomePageState extends State<HomePage> {
           // image carousel begins here
           image_set,
           // padding widget
-          new Padding(padding: const EdgeInsets.all(8.0),
-          child: new Text('Categories'),
+          new Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: new Text('Categories'),
           ),
           //horizontal list view begins here
 
           HorizontalList(),
 
-          new Padding(padding: const EdgeInsets.all(20.0),
+          new Padding(
+            padding: const EdgeInsets.all(20.0),
             child: new Text('Recent products'),
           ),
 
