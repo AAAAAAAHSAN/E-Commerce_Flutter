@@ -192,7 +192,8 @@ class _ProductDetailsState extends State<ProductDetails> {
             title: new Text("Product details"),
             subtitle: new Text("skdfj skdfjdksf dsfkdjsfk dsfkjdskf sdfkjdsflksd sdrjweior dfkfjodig dfmdsifu ekjrei dmfdj sfds "
                 "sdfkjdskfjsdkfjkds kfjdksf "
-                "dkfjdskf dskfjierjew  "),
+                "dkfjdskf dskfjierjew  dkfsdkf ksdfskldf sdfjdlf klsdfjdifew rewkrewkdfsi sdfmdskfjsdkf fdskfadfkl;aepofew edfkdsf dkfl"
+                "dslkfjsldkfjsdif dfjdlskfj sd "),
           ),
           Divider(),
           new Row(
