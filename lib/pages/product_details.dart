@@ -69,7 +69,21 @@ class _ProductDetailsState extends State<ProductDetails> {
             children: <Widget>[
               // ---------- the size button
               Expanded(
-                child: MaterialButton(onPressed: (){},
+                child: MaterialButton(onPressed: (){
+                  showDialog(context: context,
+                  builder: (context){
+                    return new AlertDialog(
+                      title: new Text("Size"),
+                      content: new Text("Choose your preferred size"),
+                      actions: <Widget>[
+                        new MaterialButton(onPressed: (){
+                          Navigator.of(context).pop(context); // this function closes the window
+                        },
+                        child: new Text("Close"),)
+                      ],
+                    );
+                  });
+                },
                 color: Colors.white,
                 textColor: Colors.grey,
                   elevation: 0.2,
@@ -88,7 +102,21 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
               // ---------- the color button
               Expanded(
-                child: MaterialButton(onPressed: (){},
+                child: MaterialButton(onPressed: (){
+                  showDialog(context: context,
+                  builder: (context){
+                    return new AlertDialog(
+                      title: new Text("Color"),
+                      content: new Text("Choose your preferred color !"),
+                      actions: <Widget> [
+                        new MaterialButton(onPressed: (){
+                          Navigator.of(context).pop(context);
+                        },
+                          child: new Text("Close"),),
+                      ],
+                    );
+                  });
+                },
                   color: Colors.white,
                   textColor: Colors.grey,
                   elevation: 0.2,
@@ -107,7 +135,21 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
               // ---------- the quantity button
               Expanded(
-                child: MaterialButton(onPressed: (){},
+                child: MaterialButton(onPressed: (){
+                  showDialog(context: context,
+                      builder: (context){
+                        return new AlertDialog(
+                          title: new Text("Quantity"),
+                          content: new Text("Choose your preferred Quantity !"),
+                          actions: <Widget> [
+                            new MaterialButton(onPressed: (){
+                              Navigator.of(context).pop(context);
+                            },
+                              child: new Text("Close"),),
+                          ],
+                        );
+                      });
+                },
                   color: Colors.white,
                   textColor: Colors.grey,
                   elevation: 0.2,
@@ -126,6 +168,8 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
             ],
           ),
+
+          // buy now button from here
           Row(
             children: <Widget>[
               Expanded(
@@ -142,7 +186,45 @@ class _ProductDetailsState extends State<ProductDetails> {
               new IconButton(icon: Icon(Icons.favorite_border), color: Colors.red,onPressed: (){},
               )
             ],
-          )
+          ),
+
+          new ListTile(
+            title: new Text("Product details"),
+            subtitle: new Text("skdfj skdfjdksf dsfkdjsfk dsfkjdskf sdfkjdsflksd sdrjweior dfkfjodig dfmdsifu ekjrei dmfdj sfds "
+                "sdfkjdskfjsdkfjkds kfjdksf "
+                "dkfjdskf dskfjierjew  "),
+          ),
+          Divider(),
+          new Row(
+            children: <Widget>[
+              Padding(padding: const EdgeInsets.fromLTRB(12.0, 5, 5, 5),
+              child: new Text("Product Name", style: TextStyle(color: Colors.grey),),
+              ),
+              Padding(padding: EdgeInsets.all(5),
+              child: new Text(widget.product_details_name),),
+            ],
+          ),
+          new Row(
+            children: <Widget>[
+              Padding(padding: const EdgeInsets.fromLTRB(12.0, 5, 5, 5),
+                child: new Text("Product Brand", style: TextStyle(color: Colors.grey),),
+              ),
+              // we have to implement band name future
+              Padding(padding: EdgeInsets.all(5),
+                child: new Text("New Brand"),),
+            ],
+          ),
+          new Row(
+            children: <Widget>[
+              Padding(padding: const EdgeInsets.fromLTRB(12.0, 5, 5, 5),
+                child: new Text("Product condition", style: TextStyle(color: Colors.grey),),
+              ),
+              // we need to add product condition future
+              Padding(padding: EdgeInsets.all(5),
+                child: new Text("New"),),
+            ],
+          ),
+
         ],
       ),
     );
