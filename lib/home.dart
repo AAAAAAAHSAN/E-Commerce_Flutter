@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
               child: ListTile(
                 title: Text('My Orders'),
                 leading: Icon(
-                  Icons.business,
+                  Icons.shopping_basket,
                   color: Colors.red,
                 ),
               ),
@@ -105,9 +105,9 @@ class _HomePageState extends State<HomePage> {
             InkWell(
               onTap: () {},
               child: ListTile(
-                title: Text('Categories'),
+                title: Text('Shopping Cart'),
                 leading: Icon(
-                  Icons.dashboard,
+                  Icons.shopping_cart,
                   color: Colors.red,
                 ),
               ),
@@ -168,7 +168,7 @@ class _HomePageState extends State<HomePage> {
 
           //grid view
           Container(
-            height: 320,
+            height: 230,
             child: Products(),
           )
         ],
