@@ -8,23 +8,23 @@ class Cart extends StatefulWidget {
 class _CartState extends State<Cart> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: new AppBar(
-      backgroundColor: Colors.red,
-      title: Text('Shopping Cart'),
-      actions: <Widget>[
-        new IconButton(
-            icon: Icon(
-              Icons.search,
-              color: Colors.white,
-            ),
-            onPressed: () {}),
-
-      ],
-    ),
+    return Scaffold(
+      appBar: new AppBar(
+        backgroundColor: Colors.red,
+        title: Text('Shopping Cart'),
+        actions: <Widget>[
+          new IconButton(
+              icon: Icon(
+                Icons.search,
+                color: Colors.white,
+              ),
+              onPressed: () {}),
+        ],
+      ),
       bottomNavigationBar: new Container(
         color: Colors.white,
         child: Row(
-          children: <Widget> [
+          children: <Widget>[
             Expanded(
               child: ListTile(
                 title: new Text("Total"),
@@ -32,8 +32,12 @@ class _CartState extends State<Cart> {
               ),
             ),
             Expanded(
-              child: new MaterialButton(onPressed: (){},
-              child: new Text("Check Out", style: TextStyle(color: Colors.white),),
+              child: new MaterialButton(
+                onPressed: () {},
+                child: new Text(
+                  "Check Out",
+                  style: TextStyle(color: Colors.white),
+                ),
                 color: Colors.red,
               ),
             )
