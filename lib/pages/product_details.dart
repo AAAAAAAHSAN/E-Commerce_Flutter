@@ -91,8 +91,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                 },
                 color: Colors.white,
                 textColor: Colors.grey,
-                  elevation: 0.2,
-                child: Row(
+                  elevation: 3.2,
+                  child: Row(
                   children: <Widget>[
                     Expanded(
                       child: new Text("Size"),
@@ -124,7 +124,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                 },
                   color: Colors.white,
                   textColor: Colors.grey,
-                  elevation: 0.2,
+                  elevation: 3.2,
                   child: Row(
                     children: <Widget>[
                       Expanded(
@@ -157,7 +157,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                 },
                   color: Colors.white,
                   textColor: Colors.grey,
-                  elevation: 0.2,
+                  elevation: 3.2,
                   child: Row(
                     children: <Widget>[
                       Expanded(

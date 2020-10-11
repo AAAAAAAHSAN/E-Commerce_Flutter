@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ecommerce_app_flutter_ahsan/components/cart_products.dart';
 
 class Cart extends StatefulWidget {
   @override
@@ -21,6 +22,7 @@ class _CartState extends State<Cart> {
               onPressed: () {}),
         ],
       ),
+      body: new Cart_products(),
       bottomNavigationBar: new Container(
         color: Colors.white,
         child: Row(
