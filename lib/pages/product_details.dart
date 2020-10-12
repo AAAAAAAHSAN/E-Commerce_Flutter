@@ -238,7 +238,7 @@ class _ProductDetailsState extends State<ProductDetails> {
         ),
 // similar product section---------
         Container(
-          height: 280,
+          height: 230,
           child: Simlar_products(),
         )
         ],
