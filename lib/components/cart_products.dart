@@ -23,6 +23,14 @@ class _Cart_productsState extends State<Cart_products> {
       "color": "Red",
       "quantity": 1
     },
+    {
+      "name": "Hill",
+      "picture": "images/products/hills1.jpeg",
+      "price": 54,
+      "size": "L",
+      "color": "Red",
+      "quantity": 1
+    },
   ];
 
   @override
@@ -110,16 +118,19 @@ class Single_cart_product extends StatelessWidget {
             )
           ],
         ),
-        trailing: Column(
-          children: <Widget> [
-
-
-              new IconButton(icon: Icon(Icons.add), onPressed: (){}),
-            new IconButton(icon: Icon(Icons.add), onPressed: (){}),
-            new IconButton(icon: Icon(Icons.add), onPressed: (){}),
-
-
-          ],
+        trailing: FittedBox(
+          fit: BoxFit.fill,
+          child: Column(
+            children: <Widget>[
+              new IconButton(icon: Icon(Icons.arrow_drop_up,size: 50,), onPressed: (){}),
+              new Text("${cart_product_quantity}",style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue),
+              ),
+              new IconButton(icon: Icon(Icons.arrow_drop_down, size: 50,), onPressed: (){}),
+            ],
+          ),
         ),
       ),
     );
