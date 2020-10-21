@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: new AppBar(
         backgroundColor: Colors.red,
-        title: Text('Ahsan E commerce'),
+        title: Text('E-Commerce by AHSAN'),
         actions: <Widget>[
           new IconButton(
               icon: Icon(
@@ -173,7 +173,6 @@ class _HomePageState extends State<HomePage> {
 
           //grid view
           Flexible(
-
             child: Products(),
           )
         ],

@@ -96,7 +96,9 @@ class Single_product extends StatelessWidget {
                       product_details_old_price: product_old_price,
                       product_details_picture: product_picture,
                       product_details_price: product_price,
-                    ))),
+                    )
+            )
+            ),
             child: GridTile(
               footer: Container(
                 color: Colors.white70,
